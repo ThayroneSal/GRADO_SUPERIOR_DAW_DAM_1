@@ -1,6 +1,6 @@
 package ejerciciosDeRecursividad;
 
-public class Ejercicio03 {
+public class Ejercicio03OrdenInverso {
 
 /*Imprimir números en orden inverso
 Escribe una función recursiva que reciba un número ( n ) y lo imprima en orden descendente.
