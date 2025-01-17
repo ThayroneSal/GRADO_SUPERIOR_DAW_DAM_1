@@ -24,7 +24,7 @@ public static String invertido (String str){
 
  /* if (palabra.isEmpty()) return palabra;
   * System.out.printIn("por ahora tengo esto: " +palabra.substring(1)+ "/" +palabra.charAt(0));
-  * return invertir(palabra.substring(1))+palabra.charAt(0);  
+  * return invertir(palabra.substring(1))+palabra.charAt(0);
   */
 
  //Función charAt en Java se utiliza para devolver el carácter en un índice específico de una cadena.
@@ -35,3 +35,20 @@ public static String invertido (String str){
 }
 
 }
+
+// utilizando el método isEmpty(). Si la cadena está vacía, la función retorna la cadena tal como está. Esta condición
+// actúa como el caso base de la recursión,
+// asegurando que la función tenga un punto de parada y no entre en un bucle infinito.
+
+// invertir(palabra.substring(1)) llama a la función recursivamente con la cadena palabra sin el primer carácter.
+//  El método substring(1) devuelve una nueva cadena que comienza desde el segundo carácter hasta el final de la cadena original.
+// palabra.charAt(0) obtiene el primer carácter de la cadena original.
+// La concatenación de estos dos valores (invertir(palabra.substring(1)) y palabra.charAt(0)) da como resultado la cadena invertida.
+// Por ejemplo, si palabra es "hola":
+
+// En la primera llamada, palabra.substring(1) es "ola" y palabra.charAt(0) es 'h'.
+// En la segunda llamada, palabra.substring(1) es "la" y palabra.charAt(0) es 'o'.
+// En la tercera llamada, palabra.substring(1) es "a" y palabra.charAt(0) es 'l'.
+// En la cuarta llamada, palabra.substring(1) es "" (cadena vacía) y palabra.charAt(0) es 'a'.
+// Finalmente, cuando palabra es "", la función retorna "".
+// Concatenando todos estos valores en orden inverso: "a" + "l" + "o" + "h" = "aloh".
