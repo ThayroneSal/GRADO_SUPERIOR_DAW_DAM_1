@@ -13,6 +13,11 @@ private String modelo;
 private int velocidad;
 
 // ahora voy a crear el constructor de la clase. Esto es lo que de verdad me permite crear el objetos.
+/**
+ * Crea un nuevo coche con una marca y un modelo especificos.
+ * @param marca la marca del coche
+ * @param modelo el modelo del coche
+ */
 
 public Coche(String marca, String modelo ){ // Vamos a suponer que por defecto un coche está quieto.
 this.marca = marca;
@@ -21,31 +26,57 @@ this.velocidad = 0;
     }
 
     // Los getters nos ayudan a obtener el valor de los atributos de la clase.
+/**
+ * Obtiene la marca del coche.
+ * @return la marca del coche
+ */
 
 public String getMarca(){
  return marca;
 
 }
+/**
+ * Obtiene el modelo del coche.
+ * @return el modelo del coche
+ */
+
 public String getModelo(){
     return modelo;
 
    }
+   /**
+    * Obtiene la velocidad actual del coche.
+    * @return la velocidad actual del coche en km/h
+    */
+
    public int getVelocidad(){
     return velocidad;
 
    }
 
 // Setters, ayudan a modificar el valor en memoria de los atributos de objeto.
+/**
+ * Cambia la marca del coche.
+ * @param marca la nueva marca del coche
+ */
 
 public void setMarca(String marca){
  this.marca = marca;
 
 }
+/**
+ * cambia el modelo del coche.
+ * @param modelo el nuevo modelo del coche
+ */
 
 public void setModelo(String modelo){
     this.modelo = modelo;
 
    }
+   /**
+    * Cambia la velocidad del coche.
+    * @param velocidad la nueva velocidad del coche (debe ser un número positivo)
+    */
 
    public void setVelocidad(int velocidad){
 
@@ -58,6 +89,10 @@ public void setModelo(String modelo){
     //this.velocidad = velocidad;
 
    }
+   /**
+    * Acelera el coche en una cantidad especifica.
+    *@param incremento la cantidad de km/h de incremento (debe ser un número positivo)
+    */
 
    public void acelerar(int incremento){
 
@@ -94,6 +129,10 @@ public void setModelo(String modelo){
         }
 
    }
+   /**
+    * Método main (principal) que crea un coche y realiza algunas operaciones con él.
+    * @param args los argumentos de la línea de comandos
+    */
 
    public static void main(String[] args) {
     //crearemos un coche de ejemplo.
@@ -102,7 +141,7 @@ public void setModelo(String modelo){
 
     Coche miCoche = new Coche ("kIA", "Ceed");
 
-      System.out.println(" Mi coche es un " + miCoche.getMarca() + " " + miCoche.getModelo() + " y va a " + miCoche.getVelocidad() + " km/h");
+      System.out.println("Mi coche es un " + miCoche.getMarca() + " " + miCoche.getModelo() + " y va a " + miCoche.getVelocidad() + " km/h");
 
       miCoche.setVelocidad(100);
 
