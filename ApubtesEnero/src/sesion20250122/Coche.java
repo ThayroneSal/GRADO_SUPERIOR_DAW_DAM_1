@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 // Ejemplo de como crear un objeto.
 
+
 public class Coche {
 
 // Lo prinero que solemos hacer es declarar que atributo va a usar nuestra clase.
