@@ -67,7 +67,7 @@ public Fraccion(int numerador, int denominador){
         this.numerador = numerador;
         this.denominador = denominador;
         } else {
-            System.out.println("El denominador no puede ser 0, por lo que no se ha creado la fracción");
+            System.out.println("El denominador no puede ser 0, y no crea la fracción");
         }
     }
 
@@ -117,7 +117,7 @@ public Fraccion(int numerador, int denominador){
         if (denominador != 0){
             this.denominador = denominador;
         } else {
-            System.out.println("El denominador no puede ser 0, por lo que no se ha cambiado el denominador");
+            System.out.println("El denominador no puede ser 0, entonces no se ha cambiado el denominador");
         }
     }
 /**
