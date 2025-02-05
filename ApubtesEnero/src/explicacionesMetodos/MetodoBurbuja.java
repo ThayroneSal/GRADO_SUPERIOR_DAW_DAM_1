@@ -51,7 +51,7 @@ public class MetodoBurbuja {
     }
 
 //     Explicación del código:
-// Arreglo original:
+// Arreglo original:.
 
 // El arreglo inicial es {64, 34, 25, 12, 22, 11, 90}.
 

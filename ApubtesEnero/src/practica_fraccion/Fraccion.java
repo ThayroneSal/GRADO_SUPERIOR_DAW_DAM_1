@@ -107,6 +107,7 @@ public Fraccion(int numerador, int denominador){
     public int getDenominador(){
         return denominador;
     }
+    
 
 /**
  * Cambia el denominador de la fracción, siempre y cuando no sea 0.
