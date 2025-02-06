@@ -1,5 +1,9 @@
 package practica_fraccion;
-
+/**
+ * @author: ThayroneSal
+ * @version: 2.0
+ * @since: 06-02-2025
+ */
 
 /***Objetivo:**
  *Diseñar y documentar la clase Fraccion, incorporando conceptos básicos como atributos, constructores, encapsulación y 
@@ -69,6 +73,7 @@ public Fraccion(int numerador, int denominador){
         } else {
             System.out.println("El denominador no puede ser 0, y no crea la fracción");
         }
+        simplificar();
     }
 
     /**
@@ -97,6 +102,7 @@ public Fraccion(int numerador, int denominador){
 
     public void setNumerador(int numerador){
         this.numerador = numerador;
+        simplificar();
     }
 
     /**
@@ -120,6 +126,7 @@ public Fraccion(int numerador, int denominador){
         } else {
             System.out.println("El denominador no puede ser 0, entonces no se ha cambiado el denominador");
         }
+        simplificar();
     }
 /**
  * Devuelve la fracción en formato de texto (numerador/denominador).
@@ -129,8 +136,57 @@ public Fraccion(int numerador, int denominador){
         return numerador + "/" + denominador;
     }
 
+    private  int calcularMCD(int a, int b){  /*calcula el maximo comun con divisor */
+        while (b != 0) {
+            int temporal = b;
+            b = a % b;
+            a = b;
+            a = temporal;
+            
+        }
+        return a;
+
+    }
+
     /**
-     * Método principal para probar la clase Fraccion.
+     * Simplifica la fracción dividiendo el numerador y el denominador por su máximo común divisor.
+     */
+
+    public void simplificar() {
+        int mcd = calcularMCD(Math.abs(this.numerador), Math.abs(this.denominador));
+        this.numerador /=  mcd;
+        this.denominador /= mcd;
+    }
+
+    public Fraccion sumar( Fraccion otraFraccion){
+        int nuevoNumerador = this.numerador * otraFraccion.denominador + otraFraccion.numerador * this.denominador;
+        int nuevoDenominador = this.denominador * otraFraccion.denominador;
+        return new Fraccion (nuevoNumerador, nuevoDenominador);
+    }
+
+    public Fraccion restar( Fraccion otraFraccion){
+        int nuevoNumerador = this.numerador * otraFraccion.denominador - otraFraccion.numerador * this.denominador;
+        int nuevoDenominador = this.denominador * otraFraccion.denominador;
+        return new Fraccion (nuevoNumerador, nuevoDenominador);
+    }
+
+    public Fraccion multiplicar( Fraccion otraFraccion){
+        int nuevoNumerador = this.numerador * otraFraccion.numerador;
+        int nuevoDenominador = this.denominador * otraFraccion.denominador;
+        return new Fraccion (nuevoNumerador, nuevoDenominador);
+    }
+
+    public Fraccion dividir( Fraccion otraFraccion){
+        int nuevoNumerador = this.numerador * otraFraccion.denominador;
+        int nuevoDenominador = this.denominador * otraFraccion.numerador;
+        return new Fraccion (nuevoNumerador, nuevoDenominador);
+    }
+
+
+
+
+    /**
+     * Método principal para probar la clase Fraccion. (06-02-2025 hecho en clase)
      * @param args
      */
 
@@ -150,6 +206,8 @@ public Fraccion(int numerador, int denominador){
 
         f1.setDenominador(0);
         System.out.println("f1 = " + f1);
+
+        System.out.println("Si sumamos las fracciones "+ f2.toString() + " y " + f3.toString() + " obtenemos " + f2.sumar(f3));
     }
 }
 
