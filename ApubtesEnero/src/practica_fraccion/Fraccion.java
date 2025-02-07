@@ -118,7 +118,11 @@ public Fraccion(int numerador, int denominador){
 /**
  * Cambia el denominador de la fracción, siempre y cuando no sea 0.
  * @param denominador
- */
+ * @return
+ * @throws IllegalArgumentException si el denominador es 0 /* throws ... es una funcion que se puede poner en el 
+ * codigo para devolver un error
+ *  */
+
 
     public void setDenominador(int denominador){
         if (denominador != 0){
@@ -135,6 +139,12 @@ public Fraccion(int numerador, int denominador){
     public String toString(){
         return numerador + "/" + denominador;
     }
+    /**
+     * Calcula el máximo común divisor de dos números enteros.
+     * @param a
+     * @param b
+     * @return
+     */
 
     private  int calcularMCD(int a, int b){  /*calcula el maximo comun con divisor */
         while (b != 0) {
@@ -150,6 +160,8 @@ public Fraccion(int numerador, int denominador){
 
     /**
      * Simplifica la fracción dividiendo el numerador y el denominador por su máximo común divisor.
+     * @param numerador
+     * @param denominador
      */
 
     public void simplificar() {
@@ -157,6 +169,17 @@ public Fraccion(int numerador, int denominador){
         this.numerador /=  mcd;
         this.denominador /= mcd;
     }
+    /* para hacer la simplificacion de una fraccion primero hacemos el maximo comun de un divisor,
+     * ejemplo el mcd de la fraccion 12/18 es 6, ahora  para simplificar hacemos en el codigo 
+     * que el numerador y el divisor se divida por el mcd, entonces 12/6 = 2 y 18/6 = 3,
+     *  entonces la fraccion simplificada es 2/3
+     */
+
+    /**
+     * Suma la fracción actual con otra fracción.
+     * @param otraFraccion
+     * @return
+     */
 
     public Fraccion sumar( Fraccion otraFraccion){
         int nuevoNumerador = this.numerador * otraFraccion.denominador + otraFraccion.numerador * this.denominador;
@@ -164,17 +187,35 @@ public Fraccion(int numerador, int denominador){
         return new Fraccion (nuevoNumerador, nuevoDenominador);
     }
 
+    /**
+     * Resta la fracción actual por otra fracción.
+     * @param otraFraccion
+     * @return
+     */
+
     public Fraccion restar( Fraccion otraFraccion){
         int nuevoNumerador = this.numerador * otraFraccion.denominador - otraFraccion.numerador * this.denominador;
         int nuevoDenominador = this.denominador * otraFraccion.denominador;
         return new Fraccion (nuevoNumerador, nuevoDenominador);
     }
 
+    /**
+     * Multiplica la fracción actual por otra fracción.
+     * @param otraFraccion
+     * @return
+     */
+
     public Fraccion multiplicar( Fraccion otraFraccion){
         int nuevoNumerador = this.numerador * otraFraccion.numerador;
         int nuevoDenominador = this.denominador * otraFraccion.denominador;
         return new Fraccion (nuevoNumerador, nuevoDenominador);
     }
+
+    /**
+     * Divide la fracción actual por otra fracción.
+     * @param otraFraccion
+     * @return
+     */
 
     public Fraccion dividir( Fraccion otraFraccion){
         int nuevoNumerador = this.numerador * otraFraccion.denominador;
