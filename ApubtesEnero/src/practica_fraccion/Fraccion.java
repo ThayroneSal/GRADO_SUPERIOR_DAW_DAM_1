@@ -23,7 +23,7 @@ package practica_fraccion;
   *Documenta el código con comentarios claros y apropiados usando JavaDoc para describir la clase, los atributos y los métodos.
   *Opcionalmente, prueba tu clase en un programa principal, mostrando en consola al menos una fracción creada con cada constructor.
 
-**Entrega: Enlace al proyecto de GitHub. Este proyecto se irá ampliando semanalmente a través de distintos commits.**
+**Entrega: Enlace al proyecto de GitHub. Este proyecto se irá ampliando semanalmente a través de distintos commits..**
 
  */
 
