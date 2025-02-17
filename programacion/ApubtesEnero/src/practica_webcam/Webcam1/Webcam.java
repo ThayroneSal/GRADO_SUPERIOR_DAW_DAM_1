@@ -1,4 +1,4 @@
-package practica_webcam;
+package practica_webcam.Webcam1;
 
 // Crear una clase `Webcam` que represente una cámara web con diversas propiedades y comportamientos.
 
