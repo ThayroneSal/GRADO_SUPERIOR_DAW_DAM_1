@@ -1,17 +1,4 @@
-/*package com.example;
-
-/**
- * Hello world!
- *
- */
-/*public class App
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-    }
-}*/
- package com.example;
+package com.example;
 
 import org.apache.commons.lang3.StringUtils; // Importamos la clase de Apache Commons Lang
 
