@@ -1,7 +1,7 @@
-package sesion20250219;
+package sesion202502191;
 
 
-abstract class Empleado{
+abstract class Empleado{ /* classe abstract no me deja llamar desde otra clase  */
     protected String nombre;
     protected double salario;
 
@@ -17,7 +17,7 @@ abstract class Empleado{
         return salario;
     }
 
-    public abstract void resumen();
+    public abstract void resumen(); /* metodo abstract me obliga a rellenar el resumen en la clase que haya heredado */
 
 }
 
@@ -69,7 +69,7 @@ class Junior extends Programador{
         return experiencia;
     }
 
-    public void tiempoDeEmpleo(){
+    public void tiempoDeEmpleo(){ /* no puedo llamar resumen porque en la clase anterior he dicho que era un final */
         System.out.println("El Programador "+nombre+" lleva "+experiencia+" años trabajando.");
     }
 }

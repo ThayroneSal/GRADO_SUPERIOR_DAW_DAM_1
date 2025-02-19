@@ -24,7 +24,9 @@ class Autor{
 
 class Libro{
     private String titulo;
-    private Autor autor;
+    private Autor autor; /*autor: Es una instancia de la clase (Autor), que presumiblemente
+    *está definida en otro lugar del código. Este atributo almacena información sobre el autor del libro,
+    *como su nombre, biografía, etc. Al igual que titulo, es privado y solo accesible dentro de la clase Libro. */
     private int paginas;
 
     public Libro(String titulo, Autor autor, int paginas){
