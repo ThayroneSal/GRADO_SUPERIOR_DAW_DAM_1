@@ -28,10 +28,18 @@ public class ImplementacionSimples { /* Clase principal */
         Sonido patan = new Perro();
         System.out.print("Garfield hace ");
         garfield.hacerSonido();
-        if (garfield instanceof Subir){
-            ((Subir) garfield).subirArbol(); /* Se usa un Casting para llamar subir porque grafild lo definimos en sanido */
-        }
-        garfield.hacerSonido();
+
+        /*if (garfield instanceof Subir){
+            ((Subir) garfield).subirArbol(); /* Se usa un Casting para llamar subir porque grafild lo definimos en sonido */
+      /*   }*/
+
+    //   if (garfield instanceof Subir){ /* otra manera de hacer el casting */
+    //     Subir subir = (Subir) garfield;
+    //     subir.subirArbol();
+    //   }
+    Subir subir = new Gato();
+    subir.subirArbol();
+      
         System.out.print("Patán hace (de vez en cuando) ");
         patan.hacerSonido();
 

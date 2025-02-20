@@ -32,8 +32,8 @@ abstract class Item { /* classe abstract no me deja llamar desde otra clase  */
 }
 
 
-class Piedra extends Item implements Hundible, Permeable { 
-    public Piedra(String nombre, int id){       
+class Piedra extends Item implements Hundible, Permeable {
+    public Piedra(String nombre, int id){
         super(nombre, id);
     }
     public void hundir(){
@@ -59,7 +59,7 @@ class Cosa extends Item implements Flotable, Permeable, Comestible {
 
 
 // class Cosa implements Flotable, Permeable, Comestible {
-    
+
 //     String nombre;
 //     int id;
 
