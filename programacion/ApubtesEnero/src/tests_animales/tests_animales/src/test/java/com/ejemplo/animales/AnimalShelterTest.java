@@ -14,7 +14,7 @@ public class AnimalShelterTest {
         shelter.addAnimal(new Dog("Ken"));
 
         List<String> sounds = shelter.getAllSounds();
-        
+
         assertEquals(2, sounds.size());
 
         assertTrue(sounds.contains("Woof!")); // contains es un metodo que verifica si un elemento esta en la lista de forma rapida.
