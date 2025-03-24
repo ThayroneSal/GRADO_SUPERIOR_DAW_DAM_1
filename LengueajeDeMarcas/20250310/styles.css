@@ -39,7 +39,10 @@ label{
     margin-top: 10px;
     font-size: 15px;
     background: blue;
-    text-align: center;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 40px; /* Asegurate de que tenga altura */
+
 }
 
 .fila{

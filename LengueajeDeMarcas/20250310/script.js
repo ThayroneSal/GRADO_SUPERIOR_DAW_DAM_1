@@ -14,8 +14,5 @@ document.getElementById("calcularBtn").addEventListener("click", function(){
     document.getElementById("resultado").textContent = imc.toFixed(2);
 
 
-
-
-
 });
 

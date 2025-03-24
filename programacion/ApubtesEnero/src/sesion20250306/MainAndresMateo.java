@@ -6,10 +6,11 @@ interface API {
 
 class ApiGitHub implements API {
     @Override
-    public String obtenerDatos(){
+   public String obtenerDatos(){
         return "Repositorios de usuario: repo1, repo2, repo3";
     }
 }
+
 
 class ApiClima implements API {
     @Override
@@ -19,10 +20,14 @@ class ApiClima implements API {
 }
 
 class ClienteAPI {
-    private API api;
+    private API api; // si me puede explicar con algun ejemplo porque llama a la interface API
 
     public ClienteAPI(API api){
         this.api = api;
+    }
+
+    public API getAPI(){ // preguntar si el get en este caso seria asi API getAPI o public getAPI
+        return api;
     }
 
     public void setAPI(API api){
@@ -45,14 +50,13 @@ class ClienteAPI {
 }
 
 
-
 public class MainAndresMateo {
 
     public static void main(String[] args) {
         ClienteAPI miEjemplo = new ClienteAPI(new ApiGitHub());
         miEjemplo.mostrarDatos();
 
-        miEjemplo.setAPI(new ApiClima());
+        miEjemplo.setAPI(new ApiClima()); // puede ser que haya cogido el set porque es la funcion de se utiliza para cambiar  un dato
         miEjemplo.mostrarDatos();
         
     }
