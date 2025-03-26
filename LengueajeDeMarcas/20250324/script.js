@@ -34,8 +34,8 @@ function calcularSegundoGrado(){
     // console.log(`Valores ingresados: a = ${a}, b = ${b}, c = ${c}`);
 
 
-    const x1 = (-b + Math.sqrt(b ** 2 - 4* a* c) / (2 * a));
-    const x2 = (-b - Math.sqrt(b ** 2 - 4* a* c) / (2 * a));
+    const x1 = (-b + Math.sqrt(b ** 2 - 4* a* c)) / (2 * a);
+    const x2 = (-b - Math.sqrt(b ** 2 - 4* a* c)) / (2 * a);
 
     // console.log(`Resultado de la ecuacion: x1 = ${x1}, x2 = ${x2}`);
 
