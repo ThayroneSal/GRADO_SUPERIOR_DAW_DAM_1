@@ -1,6 +1,6 @@
-public class IteratorColeccionSortForeach {
+package sesion20250401;
 
-    import java.util.ArrayList;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 
@@ -34,4 +34,4 @@ public class IteratorColeccionSortForeach  {
     }
 }
 
-}
+

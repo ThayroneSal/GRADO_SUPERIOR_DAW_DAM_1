@@ -1,6 +1,6 @@
-public class ConjuntoSet {
+package sesion20250401;
 
-    import java.util.Iterator;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -25,4 +25,4 @@ public class ConjuntoSet {
         }
     }
 }
-}
+

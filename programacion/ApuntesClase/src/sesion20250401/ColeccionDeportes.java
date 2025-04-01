@@ -1,4 +1,4 @@
-public class ColeccionDeportes {
+package sesion20250401;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -50,4 +50,4 @@ public class ColeccionDeportes  {
 
     }
 }
-}
+

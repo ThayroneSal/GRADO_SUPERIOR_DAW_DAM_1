@@ -1,4 +1,4 @@
-public class DiccionarioMap {
+package sesion20250401;
 
     import java.util.HashMap;
 import java.util.Iterator;
@@ -37,4 +37,4 @@ public class DiccionarioMap {
     }
 }
 
-}
+

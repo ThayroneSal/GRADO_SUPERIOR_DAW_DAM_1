@@ -1,6 +1,6 @@
-public class ListaList {
+package sesion20250401;
 
-    import java.util.ArrayList;
+import java.util.ArrayList;
 
 public class ListaList {
     public static void main(String[] args) {
@@ -34,4 +34,4 @@ public class ListaList {
     }
 }
 
-}
+
