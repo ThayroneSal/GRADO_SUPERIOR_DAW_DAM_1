@@ -1,7 +1,7 @@
 import java.util.Stack;
 
 public class VerificadorParentesis {
-    
+
     // Devuelve true si la operación está bien estructurada (cierra todos los paréntesis que abre y no sobra ninguno)
     public static boolean estaBienEstructurada(String operacion) {
         Stack<Character> pila = new Stack<>();
@@ -21,6 +21,7 @@ public class VerificadorParentesis {
                 pila.pop();
             }
         }
+
         System.out.println("No he encontrado errores y la pila ya está vacía.");
         return pila.isEmpty(); // Si la pila está vacía, todo está bien estructurado
 
