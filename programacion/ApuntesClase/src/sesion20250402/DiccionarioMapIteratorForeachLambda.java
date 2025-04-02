@@ -1,11 +1,11 @@
-package sesion20250401;
+package sesion20250402;
 
-    import java.util.HashMap;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-public class DiccionarioMap {
+public class DiccionarioMapIteratorForeachLambda {
     public static void main(String[] args) {
         // Crear HashMap
         Map<String, Integer> palabrasQuijote = new HashMap<String, Integer>();
@@ -28,13 +28,27 @@ public class DiccionarioMap {
         palabrasQuijote.remove("merced");
 
         // Imprimir recorriendo con Iterator
-        Set<Map.Entry<String, Integer>> set = palabrasQuijote.entrySet(); //.entrySet convierte el map en un set es una forma para usar los metodos de una coleccion normal y el interador
+        System.out.println("\nImprimiendo con Iterator y while (con entrySet): ");
+        Set<Map.Entry<String, Integer>> set = palabrasQuijote.entrySet();
         Iterator<Map.Entry<String, Integer>> iterator = set.iterator();
         while (iterator.hasNext()) {
             Map.Entry<String, Integer> mentry = iterator.next();
             System.out.println("Clave: " + mentry.getKey() + " - Valor: " + mentry.getValue());
         }
+
+        // Imprimir recorriendo con un bucle for-each:
+        System.out.println("\nImprimiendo con bucle for-each (con entrySet): ");
+        for (Map.Entry<String, Integer> entrada : palabrasQuijote.entrySet()) {
+            System.out.println("Clave: " + entrada.getKey() + " - Valor " + entrada.getValue());
+        }
+
+
+        // Alternativa más moderna (Java 8+) con una expresión lambda:
+        System.out.println("\nImprimiendo con bucle for-each (expresión lambda): ");
+        palabrasQuijote.forEach((clave, valor) ->
+        System.out.println("Clave: " + clave + " - Valor " + valor ));
+
     }
 }
 
-
+ 
