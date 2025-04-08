@@ -27,4 +27,5 @@ usuarios:
       habitantes: 200000
   telefono: 658154799
 
-  //para adicionar mas usuarios en este caso seria ponerlos dentro de un array list los array se usa (-)
+  # para adicionar mas usuarios en este caso seria ponerlos dentro de un array list los array se usa (-)
+  # Json no admite comentarios en yaml si pero con (#)

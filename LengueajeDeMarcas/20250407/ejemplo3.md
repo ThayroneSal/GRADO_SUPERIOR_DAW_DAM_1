@@ -37,3 +37,14 @@ Crea un objeto Jason que represente un pedido online. Este objeto debe de conten
     "total" 1470
 
 }
+
+----------------------------------------------------------------------------------
+## Ejercicio 2. YML y JSON
+- Nombre de concierto (tipo string)
+- Fecha (tipo string)
+- Ubicacion (Ciudad, Lugar)
+- Precio: (tipo numerico)
+- Gratuito (tipo booleano)
+- Categorias de musica (lista de string)
+- Artistas (lista de objeto con nombre y estilo de musica)
+- Estado del evento (pediente, confirmado, null si no esta aun definido)
